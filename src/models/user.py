@@ -6,8 +6,8 @@ Created on Sat Apr 22 17:43:46 2017
 """
 import uuid
 from flask import session
-from common.database import Database
-from models.lead import Lead
+from src.common.database import Database
+from src.models.lead import Lead
 
 class User(object):
     def __init__(self,first_name, last_name, company, email, password, _id=None):
