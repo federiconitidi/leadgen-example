@@ -7,9 +7,9 @@ Created on Thu Apr 20 15:43:17 2017
 
 from flask import Flask, render_template, request, session
 from common.database import Database
-from models.user import User
-from models.lead import Lead
-from models.message import Message
+from src.models.user import User
+from src.models.lead import Lead
+from src.models.message import Message
 
 
 app=Flask(__name__)

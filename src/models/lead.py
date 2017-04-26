@@ -6,8 +6,8 @@ Created on Sat Apr 22 17:43:46 2017
 """
 import datetime
 import uuid
-from models.message import Message
-from common.database import Database
+from src.models.message import Message
+from src.common.database import Database
 
 class Lead(object):
     def __init__(self, user_id, first_name, last_name, email, source, status='To be contacted', created_date=str(datetime.datetime.utcnow())[:-7], _id=None):

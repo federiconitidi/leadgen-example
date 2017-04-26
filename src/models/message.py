@@ -6,7 +6,7 @@ Created on Sat Apr 22 17:43:46 2017
 """
 import datetime
 import uuid
-from common.database import Database
+from src.common.database import Database
 
 class Message(object):
     def __init__(self,origin, message, lead_id, created_date=str(datetime.datetime.utcnow())[:-7], _id=None):
