@@ -17,7 +17,7 @@ app.secret_key='Federico'
 
 @app.route('/')
 def home_template():
-    return render_template('register.html')
+    return render_template('home.html')
 
 @app.before_first_request
 def initialize_database():
@@ -31,9 +31,7 @@ def login_template():
 def login_user():
     email=request.form['email']
     password=request.form['password']
-    print(email, password)
     if User.login_valid(email, password):
-        print('mamma')
         User.login(email)
         user=User.get_by_email(email)
         leads= Lead.get_from_mongo_by_user(user._id)
@@ -70,7 +68,17 @@ def register_template():
 
 @app.route('/auth/register', methods=['POST'])
 def register_user():
-    pass
+    first_name=request.form['first_name']
+    last_name=request.form['last_name']
+    company=request.form['company']
+    email=request.form['email']
+    password=request.form['password']
+    new_user=User(first_name, last_name, company, email, password)
+    new_user.save_to_mongo()
+    session['email']=email    
+    leads= []
+    return render_template('leads.html', leads=leads)
+
 
 #@app.route('/leads/<string:user_id>')
 #@app.route('/leads')
