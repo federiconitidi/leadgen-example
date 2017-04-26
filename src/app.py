@@ -6,7 +6,7 @@ Created on Thu Apr 20 15:43:17 2017
 """
 
 from flask import Flask, render_template, request, session
-from common.database import Database
+from src.common.database import Database
 from src.models.user import User
 from src.models.lead import Lead
 from src.models.message import Message
