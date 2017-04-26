@@ -8,7 +8,7 @@ import pymongo
 import os
 
 class Database(object):
-    URI =os.environ.get("MONGOLAB_URI")         #"mongodb://127.0.0.1:27017" 
+    URI ="mongodb://heroku_wtlm35gl:va4n6k5pn6tcjioheunc7hvv3b@ds117931.mlab.com:17931/heroku_wtlm35gl"      #os.environ.get("MONGOLAB_URI")         #"mongodb://127.0.0.1:27017" 
     print(URI)
     DATABASE = None
     
