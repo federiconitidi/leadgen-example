@@ -5,9 +5,10 @@ Created on Thu Apr 20 09:47:52 2017
 @author: Nitidi Federico
 """
 import pymongo
+import os
 
 class Database(object):
-    URI = "mongodb://<federiconitidi>:<123>@ds117931.mlab.com:17931/heroku_wtlm35gl"
+    URI = os.environ.get("MONGOLAB_URI")
     DATABASE = None
     
     @staticmethod
