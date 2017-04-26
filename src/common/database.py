@@ -9,6 +9,7 @@ import os
 
 class Database(object):
     URI =os.environ.get("MONGOLAB_URI")         #"mongodb://127.0.0.1:27017" 
+    print(URI)
     DATABASE = None
     
     @staticmethod
