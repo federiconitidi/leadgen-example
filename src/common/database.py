@@ -7,7 +7,7 @@ Created on Thu Apr 20 09:47:52 2017
 import pymongo
 
 class Database(object):
-    URI = "mongodb://127.0.0.1:27017"
+    URI = "mongodb://<federiconitidi>:<123>@ds117931.mlab.com:17931/heroku_wtlm35gl"
     DATABASE = None
     
     @staticmethod
