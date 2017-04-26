@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lead automation</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/static/js/my.js"></script>
+
+</head>
+<body>
+<!-- Body of the page -->
+    <div class="container">
+        <div id="user_panel">
+        <div  id="logout-button" ><a href="/logout"><button type="button"class="btn btn-default">Logout</button></a></div>
+        <hr style="margin:5px auto;">
+        <div class="panel panel-default">
+        <div class="panel-heading">Lead Automation Platform</div>
+        <div class="panel-body">
+    
+            {% block content %}
+    
+            {% endblock %}
+        </div>
+        </div>
+        </div>
+    </div>
+<!-- Body of the page -->
+</body>
+</html>

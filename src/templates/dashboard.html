@@ -1,0 +1,18 @@
+{% extends "base_user_panel.html" %}
+{% block content %}
+
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active"><a href="/dashboard">Dashboard</a></li>
+    <li role="presentation"><a href="/leads">Leads</a></li>
+    <li role="presentation"><a href="/profile">Profile</a></li>
+</ul>
+
+<h1>Welcome {{ first_name }}!</h1>
+<hr>
+<h3>Here is a summary of the status of your leads</h3>
+<p><b>To be contacted: </b><span class="label label-default">34</span></p>
+<p><b>Working:</b><span class="label label-primary">21</span></p></p>
+<p><b>Interested:</b><span class="label label-info">12</span></p></p>
+<p><b>Qualified:</b><span class="label label-success">8</span></p></p>
+
+{% endblock %}

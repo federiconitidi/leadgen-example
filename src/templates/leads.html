@@ -1,0 +1,42 @@
+{% extends "base_user_panel.html" %}
+{% block content %}
+
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active"><a href="/leads">Leads</a></li>
+    <li role="presentation"><a href="/profile">Profile</a></li>
+</ul>
+
+<h1>Lead Manager</h1>
+<div  id="logout-button" ><a href="/leads/new"><button type="button"class="btn btn-success">New lead</button></a></div>
+<p> </p>
+{% if leads|length >0 %}
+
+    <table class="table">
+    <tr>
+        <th>First name</th>
+        <th>Last name</th> 
+        <th>Email</th>
+        <th>Source</th>
+        <th>Status</th>
+        <th>Date created</th>
+        <th></th>
+    </tr>
+    {% for lead in leads %}
+    <tr>
+        <td>{{ lead.first_name }}</td>
+        <td>{{ lead.last_name }}</td> 
+        <td>{{ lead.email }}</td>
+        <td>{{ lead.source }}</td>
+        <td>{{ lead.status }}</td> 
+        <td>{{ lead.created_date }}</td>
+        <td><a href="/leads/open/{{ lead._id }}"><button type="button"class="btn btn-sefault">🔎</button></a> <a href="/leads/delete/{{ lead._id }}"><button type="button"class="btn btn-danger">✖</button></a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% else %}
+    <h3>There isn't any lead yet</h3>
+{% endif %}
+
+<hr>
+{% endblock %}
