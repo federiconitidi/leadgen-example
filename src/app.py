@@ -31,7 +31,9 @@ def login_template():
 def login_user():
     email=request.form['email']
     password=request.form['password']
+    print(email, password)
     if User.login_valid(email, password):
+        print('mamma')
         User.login(email)
         user=User.get_by_email(email)
         leads= Lead.get_from_mongo_by_user(user._id)
