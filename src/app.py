@@ -17,7 +17,12 @@ app.secret_key='Federico'
 
 @app.route('/')
 def home_template():
+    return render_template('home.html')
+
+@app.route('/new')
+def new_template():
     return render_template('home_new.html')
+
 
 @app.before_first_request
 def initialize_database():
