@@ -13,6 +13,13 @@
 
 /* body{position:relative;width:100%;min-height:auto;background:url(../img/bg-pattern.png),#2483dc;background:url(../img/bg-pattern.png),-webkit-linear-gradient(to left,#2483dc,#2455dc);background:url(../img/bg-pattern.png),linear-gradient(to left,#2483dc,#2455dc);}*/
 
+.colorshade{
+    background:#2483dc;
+    background:-webkit-linear-gradient(to left,#2483dc,#254396);
+    background:linear-gradient(to left,#2483dc,#254396);
+}
+
+
 body {
     background-color: rgb(247,248,250);
 }
@@ -136,7 +143,7 @@ body {
 }
 
 input:checked + .slider {
-  background-color: rgb(66, 134, 244);
+  background-color: rgb(37, 67, 150);
 }
 
 
@@ -145,7 +152,7 @@ input:checked + .slider {
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px rgb(66, 134, 244);
+  box-shadow: 0 0 1px rgb(37, 67, 150);
 }
 
 input:checked + .slider:before {
