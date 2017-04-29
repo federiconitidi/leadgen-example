@@ -2,7 +2,7 @@
 
 {% block content %}
 <!-- background-color:rgb(255, 145, 94) -->
-<nav class="navbar-default" style="background-color:rgb(255, 145, 94)">
+<nav class="navbar-default navbar-fixed-top shadow" style="background-color:rgb(255, 145, 94)">
    <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -25,7 +25,7 @@
    </div>
    <!-- /.container-fluid -->
 </nav>
-<div  style=" margin-right:20px; margin-left:20px">
+<div  style=" margin-right:20px; margin-left:20px; margin-top:50px">
    <div class="container-fluid" style="height:20px"> </div>
    <div class="container-fluid">
       <!-- Main frame containing the 3 main white panels-->
@@ -42,7 +42,10 @@
                         <p class="subtitle">5 total</p>
                      </div>
                      <div class="col-xs-6" style="text-align:right; color:rgb(255, 145, 94)">
-                        <p>To call <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span></p>
+
+                        <div data-toggle="modal" data-target="#exampleModal" data-whatever="blabla"><p>Add <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></p></div>
+
+
                      </div>
                   </div>
                </div>
@@ -51,8 +54,8 @@
                <div class="container-fluid">
                   <br>
                   <div class="list-group">
-                     <a href="#" class="list-group-item"><strong>Sean Lewin </strong><br><span  class="subtitle">The awesome co.</span><span class="badge" style="background-color:rgb(255, 145, 94)">1</span></a>
-                     <a href="#" class="list-group-item"><strong>Elon Musk </strong><br><span  class="subtitle">CEO at Tesla</span><span class="badge" style="background-color:rgb(255, 145, 94)">1</span></a>
+                     <a href="#" class="list-group-item"><strong>Sean Lewin </strong><br><span  class="subtitle">The awesome co.</span><span class="badge" style="background-color:rgb(255, 145, 94)"></span></a>
+                     <a href="#" class="list-group-item"><strong>Elon Musk </strong><br><span  class="subtitle">CEO at Tesla</span><span class="badge" style="background-color:white; color:rgb(255, 145, 94)"></span></a>
                      <a href="#" class="list-group-item"><strong>Jeff Bezos </strong><br><span  class="subtitle">CEO at Amazon</span></a>
                      <a href="#" class="list-group-item"><strong>Mark Benioff </strong><br><span  class="subtitle">CEO at Salesforce</span></a>
                   </div>
@@ -67,7 +70,7 @@
                      <div class="col-xs-9" style="height:0px">
                         <p  class="title"><strong>Message history</strong></p>
                      </div>
-                     <div class="col-xs-3" style="height:0px; text-align:right; color:rgb(255, 145, 94)">
+                     <div class="col-xs-3" style="height:0px; text-align:right; color:rgb(66, 134, 244)">
                         <p><strong>Autopilot</strong></p>
                      </div>
                   </div>
@@ -103,7 +106,7 @@
                   <p>Hi Aryeh,<br>Hope this email finds you well<br>Just want to follow up on the email below - are you still interested in knowing more about our offering?<br>In case let me know and we'll schedule a quick call<br>Best, <br>Federico</p>
                </div>
                <div style="text-align:right; padding:10px">
-                  <button type="submit" class="btn btn-success">Send</button>
+                  <button type="submit" class="btn btn-primary" style="background-color:rgb(66, 134, 244); border:rgb(66, 134, 244)">Send</button>
                </div>
             </div>
             <br>
@@ -113,7 +116,7 @@
                <div class="row">
                   <div class="col-xs-9">
                      <div style="padding:10px">
-                        <p style="color:grey">RE: Our initial conversation<br><span class="label label-success" style="background-color:rgb(255, 145, 94)">Reply</span></p>
+                        <p style="color:grey">RE: Our initial conversation<br><span class="label" style="background-color:rgb(255, 145, 94)">Reply</span></p>
                      </div>
                   </div>
                   <div class="col-xs-3"  style="padding:10px">
@@ -176,11 +179,62 @@
                </div>
                <hr style="margin: 0px auto">
 
-<p> </p>
+
+<div class="container-fluid">
+                  <br>
+
+
+    <table class="table">
+    <tr><td>Company</td><td>The Awesome co.</td></tr>
+    <tr><td>Email</td><td>sslewin@gmail.com</td></tr>
+    <tr><td>Mobile</td><td>+1 526 8229209</td></tr>
+    </table>
+<div data-toggle="modal" data-target="#exampleModal" data-whatever="blabla" style="color:grey; text-align:right"><p>Add info <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></p></div>
+
+<hr>
+<div style="text-align:right">
+<button type="submit" class="btn btn-default" style="margin:10px" data-toggle="modal" data-target="#exampleModal" data-whatever="blabla">Forward and stop chasing</button><br>
+<button type="submit" class="btn btn-danger" style="margin:10px" data-toggle="modal" data-target="#exampleModal" data-whatever="blabla">Stop chasing</button>
+</div>
+
+
+                </div>
+
+
             </div>
          </div>
       </div>
    </div>
 </div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Message_id:</label>
+            <input type="text" class="form-control" id="recipient-name" readonly>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Tag:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" href="#" >Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 {% endblock %}
